@@ -4,7 +4,7 @@ implementar as operações de depósito, saque e extrato em Python para um banco
 
 Para implementar as operações de depósito, saque e extrato em Python para um banco, podemos criar uma classe chamada Conta que representará uma conta bancária. Esta classe pode conter métodos para cada uma das operações desejadas, além de uma lista para armazenar o histórico de transações.
 
-#Pyton
+# Pyton
 
 class ContaBancaria:
     def __init__(self, numero_conta):
@@ -26,7 +26,7 @@ class ContaBancaria:
 Com essa implementação, pode-se criar objetos da classe ContaBancaria e utilizar seus métodos para realizar as operações de depósito, saque e extrato. 
 Por exemplo:
 
-#Pyton
+# Pyton
 
 # Criando uma nova conta
 conta = ContaBancaria(123456)
