@@ -1,11 +1,4 @@
-# Criando uma nova conta
-conta = ContaBancaria(123456)
-
-# Depositando R$ 500,00 na conta
-conta.depositar(500)
-
-# Sacando R$ 200,00 da conta
-conta.sacar(200)
-
-# Imprimindo o extrato da conta
-print(conta.extrato())  # Saída: Conta: 123456 / Saldo: R$300.00
+conta = Conta(12345)
+conta.depositar(1000)
+conta.sacar(500)
+conta.extrato()
