@@ -1,0 +1,3 @@
+ banco = Banco()
+banco.criar_usuario("João Silva", "111.111.111-11")
+banco.criar_conta_corrente("111.111.111-11",
