@@ -1,16 +1,22 @@
-class ContaBancaria:
-    def __init__(self, numero_conta):
-        self.numero_conta = numero_conta
-        self.saldo = 0
+class Conta:
+    def __init__(self, numero, saldo_inicial=0):
+        self.numero = numero
+        self.saldo = saldo_inicial
+        self.historico = []
 
     def depositar(self, valor):
         self.saldo += valor
+        self.historico.append(('DEPÓSITO', valor))
 
     def sacar(self, valor):
-        if self.saldo >= valor:
-            self.saldo -= valor
-        else:
-            print("Saldo insuficiente")
+        if self.saldo < valor:
+            raise ValueError('Saldo insuficiente')
+        self.saldo -= valor
+        self.historico.append(('SAQUE', valor))
 
     def extrato(self):
-        return f"Conta: {self.numero_conta} / Saldo: R${self.saldo:.2f}"
+        print('Extrato da conta', self.numero)
+        print('Saldo:', self.saldo)
+        print('Histórico:')
+        for tipo, valor in self.historico:
+            print(tipo, '-', valor)
